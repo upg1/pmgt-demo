@@ -79,7 +79,10 @@ langchain==0.2.14
 langchain-core==0.2.33
     # via
     #   langchain
+    #   langchain-openai
     #   langchain-text-splitters
+langchain-openai==0.1.22
+    # via -r requirements.in
 langchain-text-splitters==0.2.2
     # via langchain
 langsmith==0.1.100
@@ -106,7 +109,9 @@ numpy==1.26.4
     #   pydeck
     #   streamlit
 openai==1.41.1
-    # via -r requirements.in
+    # via
+    #   -r requirements.in
+    #   langchain-openai
 orjson==3.10.7
     # via langsmith
 packaging==24.1
@@ -146,11 +151,14 @@ referencing==0.35.1
     # via
     #   jsonschema
     #   jsonschema-specifications
+regex==2024.7.24
+    # via tiktoken
 requests==2.32.3
     # via
     #   langchain
     #   langsmith
     #   streamlit
+    #   tiktoken
 rich==13.7.1
     # via streamlit
 rpds-py==0.20.0
@@ -175,6 +183,8 @@ tenacity==8.5.0
     #   langchain
     #   langchain-core
     #   streamlit
+tiktoken==0.7.0
+    # via langchain-openai
 toml==0.10.2
     # via streamlit
 tornado==6.4.1
